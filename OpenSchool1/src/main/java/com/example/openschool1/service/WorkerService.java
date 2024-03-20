@@ -22,8 +22,8 @@ public class WorkerService {
     }
 
     public Worker get(Long id) {
-
-        return workerRepository.findById(id).get();
+        //workerRepository.findAll();
+        return workerRepository.findById(id).orElse(null);
     }
 
     public void delete(Long id) {
